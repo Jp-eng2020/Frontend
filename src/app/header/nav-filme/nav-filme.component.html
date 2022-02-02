@@ -1,0 +1,50 @@
+<nav style="background-color:blue; width: 100%; height: 70px; " class="fixed-top ">
+<div class="accessibility d-flex" id="accessibility">
+  <div class="accessibility-div d-flex justify-content-center">  
+  </div>
+  <div class="accessibility-div d-flex justify-content-center">
+      <div class="div-item-accessibility d-flex align-items-center">
+          <button class="accessibility-button d-flex align-items-center" (click)="contrast()">
+               contrast
+          </button>
+      </div>
+      <div class="div-item-accessibility d-flex align-items-center">
+          <button class="accessibility-button" (click)="increaseFont()">
+               A+ 
+          </button>
+      </div>
+      <div class="div-item-accessibility d-flex align-items-center">
+          <button class="accessibility-button" (click)="defaultFont()">
+              A 
+          </button>
+      </div>
+      <div class="div-item-accessibility d-flex align-items-center">
+          <button class="accessibility-button" (click)="decreaseFont()">
+              A- 
+          </button>
+      </div>
+  </div>
+</div>
+</nav>
+<nav id="opac" style="background-color:black; top: 70px; " class="fixed-top">
+  <!---->
+  
+  <div class="d-flex justify-content-between bd-highlight  text-white " style="margin-top: 10px; ">
+  
+    <!---->
+    <div class="p-2   bd-highlight "> <p class="text-white "  style="margin-top: -1rem; " >
+      <p>
+        
+        <i class="p-1 bi bi-app-indicator " dropdown *ngIf="userAutenticated || userAutenticatedAdmin" ><a routerLink="/cadastrarFilmes" class="p-2 text-white"  dropdown *ngIf="userAutenticated || userAutenticatedAdmin">Filmes</a> </i>  
+        <i class="p-1 bi bi-app-indicator" dropdown *ngIf="userAutenticated || userAutenticatedAdmin" ><a routerLink="/cadastrarCategoria" rel="noopener" target="_blank" class="p-2 text-white" dropdown *ngIf="userAutenticated || userAutenticatedAdmin" >Categorias</a></i>
+        <i class="p-1 bi bi-app-indicator" dropdown *ngIf="userAutenticated || userAutenticatedAdmin"  ><a routerLink="/cadastro" rel="noopener" target="_blank" class="p-2 text-white" dropdown *ngIf="userAutenticated || userAutenticatedAdmin" >Cadastrar-se</a></i>
+
+      </p>
+    </div>
+  <!---->
+    <div class="p-2  bd-highlight col-sm-2"><a routerLink="/" class="p-2 text-white"> <img src="assets/logo/logo.png"  style="max-width:20px;"> </a></div>
+   
+    <div class="p-2  bd-highlight"> <i class="bi bi-search" ></i></div>
+  </div>
+</nav>
+

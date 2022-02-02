@@ -1,0 +1,25 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+footer{
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    height: 50;
+    position: fixed;
+    width: 100%;
+    z-index:1;
+    //border:1px solid blue;
+
+}
+
+.aux-div  p{
+    //border:1px solid blue; 
+    width:150px;
+    margin-bottom: 6px;
+}
+
+a{
+    text-decoration: none;
+
+}

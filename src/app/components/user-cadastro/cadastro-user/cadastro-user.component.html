@@ -1,0 +1,58 @@
+<div class="container-fluid px-1 py-1 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-6 col-md-9 col-11 text-center">
+  
+            <div class="card">
+                <h5 class="text-center mb-2 color-white">Cadastrar</h5>
+                <form class="row g-3 needs-validation">
+
+                    <div class="row justify-content-center text-left">
+                        <!--NOME-->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" [ngStyle]="{'font-size':(1.5*font_size) + 'px'}" >Nome<span class="text-danger"> *</span></label> 
+                            <input type="text" id="nome" name="nome" formControlName = "nome" placeholder="nome" onblur="validate(1)"> 
+                        </div>
+                        <!--CPF-->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" [ngStyle]="{'font-size':(1.5*font_size) + 'px'}" >Cpf<span class="text-danger"> *</span></label> 
+                            <input type="CPF" id="CPF" name="CPF" formControlName = "CPF" placeholder="CPF" onblur="validate(2)"> 
+                        </div>
+                        <!--TELEFONE    -->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" [ngStyle]="{'font-size':(1.5*font_size) + 'px'}" >Telefone<span class="text-danger"> *</span></label> 
+                            <input type="text" id="telefone" name="telefone" formControlName = "telefone" placeholder="Telefone" onblur="validate(2)"> 
+                        </div>
+                        <!--EMAIL-->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"[ngStyle]="{'font-size':(1.5*font_size) + 'px'}" >Email<span class="text-danger"> *</span></label> 
+                            <input type="text" id="email" name="email" formControlName = "email" placeholder="Email" formControlName = "email" placeholder="Email" onblur="validate(2)"> 
+                        </div>
+                        <!--PASSWORD-->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" [ngStyle]="{'font-size':(1.5*font_size) + 'px'}" >Password<span class="text-danger"> *</span></label> 
+                            <input type="text" id="password" name="password" formControlName = "password" placeholder="password" onblur="validate(2)"> 
+                        </div>
+                        <!--PERFIL-->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" [ngStyle]="{'font-size':(1.5*font_size) + 'px'}" >Perfil<span class="text-danger"> *</span></label> 
+                            <input type="text" id="perfil" name="perfil" formControlName = "perfil" placeholder="URL" onblur="validate(2)"> 
+                        </div>
+                        <!--ROLE-->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" [ngStyle]="{'font-size':(1.5*font_size) + 'px'}" >Roles<span class="text-danger"> *</span></label> 
+                        <select class="form-control " id="Role" name="Role" >
+                            <option value="ROLE_ADMIN">Admin</option>
+                            <option value="ROLE_USER">USER</option>
+                        </select>
+                        </div>
+                        <!--IDIOMA ID-->
+                        <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" [ngStyle]="{'font-size':(1.5*font_size) + 'px'}" >Idioma<span class="text-danger"> *</span></label> 
+                            <select class="form-control form-control-l" formControlName = "idioma" id="exampleFormControlSelect1">
+                                <option  *ngFor="let iten of idioma" [value]="iten.id">{{iten.nome}}</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="row justify-content-end">
+                        <div class="form-group col-sm-15"> <button type="submit" class="btn-block btn-primary"(click)="onSubmit()" >Cadastrar</button> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

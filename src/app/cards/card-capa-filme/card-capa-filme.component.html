@@ -1,0 +1,31 @@
+<div id="azin" class="col-md-100 " >
+<div class="content">
+    <div class="text-top"><h1>Filmes recomendados</h1></div>
+        <div class="the-box-relative"  ><!--Div Principal POSITION RELATIVE-->
+            <owl-carousel-o [options]="customOptions" >
+                <ng-template carouselSlide [width]="250" *ngFor="let im of carde">
+                    <!--LISTA COM AS CAPAS -->
+                    <div class="grid-box">
+                        <div id="the-box-absolute">
+                            <!--Div Principal POSITION ABSOLUTE-->
+                                <img class="fakeImg" src="{{im.imagem}}" >
+                    
+                            <!----------------------->
+
+                            <!--LISTA COM NOME DOS FILMES -->
+                            <div class="title-imagem">
+                                <span id="mostrar">{{im.titulo}}</span>
+                            </div>
+                        </div>
+                    <!----------------------------->
+                </div>
+                </ng-template>  
+
+            </owl-carousel-o>
+
+        </div>
+</div>
+
+</div>
+
+

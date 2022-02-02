@@ -1,0 +1,109 @@
+<div id="mostrar" >
+    <!--TITULO-->
+    <div class="text-top">
+        <h1>Categorias</h1>
+    </div  >
+    <div id="animes" (click)="diminuir()">
+        <owl-carousel-o [options]="customOptions" >
+            <ng-template carouselSlide [width]="505">
+                <div class="main-img-text" (click)="toggleCollapse()" id="mak">
+                    <!--CAPA-->
+                    <img  src="assets/capas/capa1.jpg" class="movie-list-img" >
+                    <!--NOME-->
+                    <div class="title-imagem" >
+                        <span class="movie-list-title" >Animes</span>
+                    </div>
+                </div>
+            </ng-template>  
+
+            <ng-template carouselSlide [width]="505">
+                <div class="main-img-text" >
+                    <!--CAPA-->
+                    <img id="ver" src="assets/capas/capa2.jpg" class="movie-list-img" >
+                    <!--NOME-->
+                    <div class="title-imagem" >
+                        <span class="movie-list-title">As melhores</span>
+                    </div>
+                </div>
+            </ng-template>  
+
+            <ng-template carouselSlide [width]="505">
+                <div class="main-img-text" >
+                    <!--CAPA-->
+                    <img id="ver" src="assets/capas/capa3.jpg" class="movie-list-img" >
+                    <!--NOME-->
+                    <div class="title-imagem" >
+                        <span class="movie-list-title">Fantasia</span>
+                    </div>
+                </div>
+            </ng-template>  
+
+            <ng-template carouselSlide [width]="505">
+                <div class="main-img-text" >
+                    <!--CAPA-->
+                    <img id="ver" src="assets/capas/capa4.jpg" class="movie-list-img" >
+                    <!--NOME-->
+                    <div class="title-imagem" >
+                        <span class="movie-list-title">Espaço</span>
+                    </div>
+                </div>
+            </ng-template>  
+
+            <ng-template carouselSlide [width]="505">
+                <div class="main-img-text" >
+                    <!--CAPA-->
+                    <img id="ver" src="assets/capas/capa5.jpg" class="movie-list-img" >
+                    <!--NOME-->
+                    <div class="title-imagem" >
+                        <span class="movie-list-title">Marfia</span>
+                    </div>
+                </div>
+            </ng-template>  
+
+            <ng-template carouselSlide [width]="505">
+                <div class="main-img-text" >
+                    <!--CAPA-->
+                    <img id="ver" src="assets/capas/capa6.jpg" class="movie-list-img" >
+                    <!--NOME-->
+                    <div class="title-imagem" >
+                        <span class="movie-list-title">Estilo Cyber Punk</span>
+                    </div>
+                </div>
+            </ng-template> 
+        </owl-carousel-o>
+    </div>
+    <!--DIV AO ACIONAR CAPA DO FILME-->
+</div>
+
+<!--MOSTRAR-->
+<!---->
+<div div="animes_overlayer" *ngIf="!isCollapsed" id="aux">
+    <!--TITULO-->
+    <div class="text-top">
+        <h1>Assistir novamente</h1>
+    </div>
+
+    <owl-carousel-o [options]="customOptions" >
+        <ng-template carouselSlide [width]="750" *ngFor="let patnersArray of patnersArray">
+                <div class="main-img-text" >
+                    <!--CAPA-->
+                        <div class="movie-post">
+                            <img src="{{patnersArray.imgName}}" class="movie-list-img" >
+                        </div>
+                        
+                        <div class="movie-card-post">
+                            <img src="{{patnersArray.imgCard}}" class="movie-list-img" >
+                        </div>
+                    <!--NOME-->
+                    <div class="titnle-imagem-rd" >
+                        <p class="movie-list-title">{{patnersArray.imgTitle}}</p>                    
+                    </div>
+                </div>
+                    <div class="class-description-movie">
+                        <p class="movie-list-title" >{{patnersArray.imgTitleDesc}}</p>
+                    </div>
+
+        </ng-template>  
+    </owl-carousel-o>
+    <!--DIV AO ACIONAR CAPA DO FILME-->
+</div>
